@@ -12,7 +12,7 @@
     <header>
         <div>
             <h2>Welcome To HangMan Game!</h2><br />
-            <h3 id="message">Type Your Guessed Letter:</h3>
+            <h3 id="message"><u>Type</u> Your Guessed Letter:</h3>
         </div>
     </header>
     <section id="word-sec">
@@ -21,6 +21,8 @@
     </section>
     <section id="detail-sec">
         <div id="detail-div">
+            <div id="keyboard">
+            </div>
             <div>
                 <div id="result-board">
                 </div>
@@ -28,9 +30,11 @@
             <div id="hangman">
                 <img id="hg-img" src="images/1.png" />
             </div>
-            <input type="text" id="raise-keyboard" value="Raise My Key Board" />
         </div>
     </section>
+    <div id="creator">
+        <h3>Powered by Arash</h3>
+    </div>
 <script src="words.js"></script>
 <script src="hangman.js"></script>
 </body>
