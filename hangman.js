@@ -23,8 +23,9 @@ letterList.forEach((element) => {
   h2elem.style.width = String(Math.round(80 / letterList.length)) + "%";
   letterObj[element] = h2elem;
 });
-document.addEventListener("keydown", function (event) {
-  event.preventDefault();
+document.addEventListener("keydown", function(e){Play(e, true)});
+function Play(event, prevent) {
+  if(prevent){event.preventDefault()};
   if(event.key[1]){
     return null;
   }else if(!(except_chars.indexOf(event.key)==-1)){
@@ -59,15 +60,17 @@ document.addEventListener("keydown", function (event) {
   };
   if (!flag && usedLetters.indexOf(event.key)==-1) {
     if (falseAttempts < 7) {
+      if(prevent){
       board.innerHTML += event.key.toUpperCase()+"  ";
-      usedLetters.push(event.key)
+      };
+      usedLetters.push(event.key);
       falseAttempts++;
       if(falseAttempts >= 7){
         hangMan.src = "images/" + falseAttempts + ".png";
         Swal.fire({
           type:'error',
           title: 'The Man Hanged!',
-          text:"You Couldn't Guess The Word Correctly.The Word Was: " + selectedWord.toUpperCase(),
+          text:"You Couldn't Guess The Word Correctly.The Word Was: **" + selectedWord.toUpperCase() + "**",
           confirmButtonText: 'Play Again!',
         })
         var playAgain = document.getElementsByClassName("swal2-confirm swal2-styled")[0];
@@ -100,4 +103,24 @@ document.addEventListener("keydown", function (event) {
     flag = false;
   }
   }
-});
+};
+var keyBoardDiv = document.getElementById("result-board");
+var keyBoard = "QWERTYUIOPASDFGHJKLZXCVBNM".split("");
+function addBtns(){
+  if(window.innerWidth <= "550"){
+    keyBoard.forEach(btn => {
+      let Button = document.createElement("Button")
+      Button.innerHTML = btn;
+      Button.classList.add("typebtn");
+      var btnEvent = {};
+      btnEvent.key = btn.toLowerCase();
+      Button.addEventListener("click", function(){Play(btnEvent, false)});
+      keyBoardDiv.style.display = "block";
+      keyBoardDiv.append(Button);
+    });
+  }
+}
+addBtns();
+document.addEventListener("resize", function(){
+  console.log(window.innerWidth)
+})
