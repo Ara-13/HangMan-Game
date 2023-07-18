@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HangMan</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.28.4/sweetalert2.all.min.js" integrity="sha256-qtyU+b249rw/5PQ1KXGRtxjlgg6hfU2EK50YOlc0n50=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.28.4/sweetalert2.min.css" integrity="sha256-1mciy4fJXvhqkSOwLvtpsTeBJ02AgAcmNYTzRMrzloU=" crossorigin="anonymous" />
+</head>
+<body>
+    <header>
+        <div>
+            <h2>Welcome To HangMan Game!</h2><br />
+            <h3 id="message">Type Your Guessed Letter:</h3>
+        </div>
+    </header>
+    <section id="word-sec">
+        <div class="word">
+        </div>
+    </section>
+    <section id="detail-sec">
+        <div id="detail-div">
+            <div>
+                <div id="result-board">
+                </div>
+            </div>
+            <div id="hangman">
+                <img id="hg-img" src="images/1.png" />
+            </div>
+            <input type="text" id="raise-keyboard" value="Raise My Key Board" />
+        </div>
+    </section>
+<script src="words.js"></script>
+<script src="hangman.js"></script>
+</body>
+</html>
