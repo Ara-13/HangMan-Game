@@ -80,29 +80,17 @@ header > div {
     width: 60%;
     height: 60%;
 }
-#raise-keyboard {
-    display: none;
-    width: 80%;
-    font-size: 1rem;
-    text-align: center;
-    border: dashed 2px lightseagreen;
-    padding: 1rem;
-    border-radius: 10px;
+#keyboard {
+    display: none !important;
 }
-#raise-keyboard:focus {
-    background: lightseagreen;
-    color: #fff;
-    outline: none;
-    cursor: none;
-    caret-color: transparent;
-}
-#reload {
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    font-size: 100%;
-    border:none;
-    color: #fff;
+#creator {
+    position: fixed;
+    z-index: 999;
+    background-color: lightgreen;
+    top: 0;
+    left: 0;
+    width: 15%;
+
 }
 @media screen and (max-width:550px) {
     .word h2 {
@@ -121,7 +109,35 @@ header > div {
     #detail-div {
         flex-direction: column-reverse;
     }
-    #raise-keyboard {
-        display: block;
+    #keyboard {
+        height: auto !important;
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #creator {
+        width: 100%;
+        height: 1.5rem;
+        font-size: 1rem;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #result-board {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        padding: auto;
+        overflow-x: auto;
+    }
+    .typebtn {
+        width: 2rem;
+        text-align: center;
+        height: 1.5rem;
+        margin: 1% 1% 0;
     }
 }
