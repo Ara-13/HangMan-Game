@@ -38,6 +38,11 @@ function Play(event, prevent) {
       let h2correct = letterObj[element];
       h2correct.innerHTML = element[0].toUpperCase();
       h2correct.classList.add("True");
+      if(!prevent){
+        let Btn = document.getElementById(event.key.toUpperCase());
+        Btn.style.background = "lightgreen";
+        Btn.setAttribute("disabled", "disabled");
+      }
       if(trueChArray.indexOf(element)==-1){
         trueChArray.push(element)
       }
@@ -62,6 +67,10 @@ function Play(event, prevent) {
     if (falseAttempts < 7) {
       if(prevent){
       board.innerHTML += event.key.toUpperCase()+"  ";
+      }else{
+        let Btn = document.getElementById(event.key.toUpperCase());
+        Btn.style.background = "lightcoral";
+        Btn.setAttribute("disabled", "disabled");
       };
       usedLetters.push(event.key);
       falseAttempts++;
@@ -112,6 +121,7 @@ function addBtns(){
       let Button = document.createElement("Button")
       Button.innerHTML = btn;
       Button.classList.add("typebtn");
+      Button.id = btn;
       var btnEvent = {};
       btnEvent.key = btn.toLowerCase();
       Button.addEventListener("click", function(){Play(btnEvent, false)});
