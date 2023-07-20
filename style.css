@@ -125,11 +125,15 @@ header > div {
         align-items: center;
         justify-content: center;
     }
+    #detail-div div {
+        width: 100%;
+    }
     #result-board {
         height: auto;
-        display: flex;
+        display: flexbox;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
         padding: 1rem;
         padding: auto;
         overflow-x: auto;
@@ -138,7 +142,7 @@ header > div {
         width: 2rem;
         text-align: center;
         height: 1.5rem;
-        margin: 1% 1% 0;
+        margin: 0 1% 0;
     }
     #word-sec .word {
         width: 100%;
