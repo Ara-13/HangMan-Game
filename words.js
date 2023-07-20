@@ -1,4 +1,4 @@
-words = [ "beach", "broom", "brush", "clock", "cloud", "crane", "daisy", "dance", "dolph", "eagle",
+var words = [ "beach", "broom", "brush", "clock", "cloud", "crane", "daisy", "dance", "dolph", "eagle",
     "earth", "fairy", "flame", "flute", "giant", "glass", "grape", "green", "hatch", "heart",
     "honey", "horse", "jewel", "kite", "lemon", "lilly", "magic", "mouse", "ocean", "peach",
     "pearl", "plant", "quail", "queen", "quick", "rabbit", "raven", "river", "salty", "shade",
