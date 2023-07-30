@@ -100,7 +100,7 @@ header > div {
     #result-board {
         font-size: 2em;
         width: 9em !important;
-        height: 5em !important;
+        height: 6em !important;
     }
     #hangman img {
         width: 100%;
@@ -134,15 +134,19 @@ header > div {
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        padding: 1rem;
+        padding: 0.5rem 5% 0 5%;
         padding: auto;
         overflow-x: auto;
     }
     .typebtn {
+        background: transparent;
         width: 2rem;
         text-align: center;
-        height: 1.5rem;
+        height: 2rem;
         margin: 0 1% 0;
+        color: rgb(67, 67, 255);
+        border: solid 0.5px rgb(67, 67, 255);
+        border-radius: 50%;
     }
     #word-sec .word {
         width: 100%;
